@@ -10,32 +10,32 @@ import {
 export const routes = [
   {
     icon: HomeIcon,
-    name: "home",
+    name: "Servicios",
     path: "/home",
     element: <Home />,
   },
   {
     icon: UserCircleIcon,
-    name: "profile",
+    name: "Quiénes somos",
     path: "/profile",
     element: <Profile />,
   },
   {
     icon: ArrowRightOnRectangleIcon,
-    name: "Sign In",
+    name: "Marcas",
     path: "/sign-in",
     element: <SignIn />,
   },
   {
     icon: UserPlusIcon,
-    name: "Sign Up",
+    name: "Contactanos",
     path: "/sign-up",
     element: <SignUp />,
   },
   {
     icon: DocumentTextIcon,
-    name: "Docs",
-    href: "https://www.material-tailwind.com/docs/react/installation",
+    name: "Youtube",
+    href: "https://www.youtube.com/@AxelPalacios",
     target: "_blank",
     element: "",
   },

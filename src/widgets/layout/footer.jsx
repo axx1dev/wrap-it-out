@@ -79,74 +79,55 @@ export function Footer({ title, description, socials, menus, copyright }) {
 }
 
 Footer.defaultProps = {
-  title: "Material Tailwind",
+  title: "Wrap It Out Ags",
   description:
-    "Easy to use React components for Tailwind CSS and Material Design.",
+    "Creamos el diseño de tus sueños.",
   socials: [
-    {
-      color: "blue",
-      name: "facebook",
-      path: "https://www.facebook.com/CreativeTim",
-    },
-    {
-      color: "light-blue",
-      name: "twitter",
-      path: "https://www.twitter.com/creativetim",
-    },
     {
       color: "purple",
       name: "instagram",
-      path: "https://www.instagram.com/creativetimofficial/",
-    },
-    {
-      color: "pink",
-      name: "dribbble",
-      path: "https://www.dribbble.com/creativetim",
+      path: "https://www.instagram.com/axl_palacioos/",
     },
     {
       color: "red",
       name: "youtube",
-      path: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      path: "https://www.youtube.com/@AxelPalacios",
     },
     {
       color: "black",
       name: "github",
-      path: "https://github.com/creativetimofficial/material-tailwind",
+      path: "https://github.com/axx1dev",
     },
   ],
   menus: [
     {
-      name: "useful links",
+      name: "Avisos",
       items: [
-        { name: "About Us", path: "https://www.creative-tim.com/presentation" },
-        { name: "Blog", path: "https://www.creative-tim.com/blog" },
+        { name: "Aviso Legal", path: "https://www.creative-tim.com/presentation" },
+        { name: "Politítica de privacidad", path: "https://www.creative-tim.com/blog" },
         {
-          name: "Github",
+          name: "Politítica de cookies",
           path: "https://www.github.com/creativetimofficial/material-tailwind?ref=mtk",
-        },
-        {
-          name: "Free Products",
-          path: "https://www.creative-tim.com/templates/free?ref=mtk",
-        },
+        }
       ],
     },
     {
-      name: "other resources",
+      name: "Contáctanos",
       items: [
         {
-          name: "MIT License",
+          name: "4491126766",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
         },
         {
-          name: "Contribute",
+          name: "axelpalacioos",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
         },
         {
-          name: "Change Log",
+          name: "Lun - Dom de 09:00 am - 06:00 pm",
           path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
         },
         {
-          name: "Contact Us",
+          name: "Real del Sol Ags.",
           path: "https://creative-tim.com/contact-us?ref=mtk",
         },
       ],
@@ -154,13 +135,13 @@ Footer.defaultProps = {
   ],
   copyright: (
     <>
-      Copyright © {year} Material Tailwind by{" "}
+      Copyright © {year} Wrap It Out by{" "}
       <a
-        href="https://www.creative-tim.com?ref=mtk"
+        href="https://www.linkedin.com/in/axel-palacios-66a8aa118/"
         target="_blank"
         className="text-blue-gray-500 transition-colors hover:text-blue-500"
       >
-        Creative Tim
+        Axel Palacios
       </a>
       .
     </>
