@@ -5,6 +5,9 @@ module.exports = withMT({
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    fontFamily: {
+      permanent: "'Permanent Marker', cursive",
+    },
   },
   plugins: [],
 });

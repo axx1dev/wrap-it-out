@@ -1,0 +1,9 @@
+.whiteShadowInline {
+    box-shadow: 0px 1.5px 5px #fff;
+}
+
+.fa-brands-custom {
+    font-size: 25px;
+    color: #607d8b;
+    padding-right: 10px;
+}

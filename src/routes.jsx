@@ -5,39 +5,49 @@ import {
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
   DocumentTextIcon,
+  CloudIcon,
+  VideoCameraIcon,
+  WrenchScrewdriverIcon,
+  ShieldCheckIcon,
+  MapPinIcon
 } from "@heroicons/react/24/solid";
 
 export const routes = [
   {
-    icon: HomeIcon,
-    name: "Servicios",
+    icon: WrenchScrewdriverIcon,
+    name: "SERVICIOS",
     path: "/home",
     element: <Home />,
+    id: "services"
   },
   {
     icon: UserCircleIcon,
-    name: "Quiénes somos",
+    name: "NUESTRO EQUIPO",
     path: "/profile",
     element: <Profile />,
+    id: "our-team"
   },
   {
-    icon: ArrowRightOnRectangleIcon,
-    name: "Marcas",
+    icon: ShieldCheckIcon,
+    name: "MARCAS",
     path: "/sign-in",
     element: <SignIn />,
+    id: "brands"
   },
   {
-    icon: UserPlusIcon,
-    name: "Contactanos",
+    icon: MapPinIcon,
+    name: "CONTÁCTANOS",
     path: "/sign-up",
     element: <SignUp />,
+    id: "contact-us"
   },
   {
-    icon: DocumentTextIcon,
-    name: "Youtube",
+    icon: VideoCameraIcon,
+    name: "YOUTUBE",
     href: "https://www.youtube.com/@AxelPalacios",
     target: "_blank",
     element: "",
+    id: "youtube"
   },
 ];
 

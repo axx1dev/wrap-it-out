@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link as LinkDom } from "react-router-dom";
 import {
   Navbar as MTNavbar,
   MobileNav,
@@ -9,6 +9,8 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, animateScroll } from "react-scroll";
+import "../styles/navbar.css";
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = useState(false);
@@ -22,25 +24,25 @@ export function Navbar({ brandName, routes, action }) {
 
     window.addEventListener(
       "scroll",
-      () => window.scrollY !== 0? setBGOpacityNavBar('bg-opacity-80') : setBGOpacityNavBar('bg-opacity-0')
+      () => window.scrollY !== 0? setBGOpacityNavBar('bg-opacity-80 whiteShadowInlineMenu') : setBGOpacityNavBar('bg-opacity-0')
     );
   }, []);
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {routes.map(({ name, path, icon, href, target }) => (
+      {routes.map(({ name, path, icon, href, target, id }) => (
         <Typography
           key={name}
           as="li"
           variant="small"
-          color="inherit"
-          className="capitalize"
+          color="white"
+          className="capitalize font-permanent"
         >
           {href ? (
             <a
               href={href}
               target={target}
-              className="flex items-center gap-1 p-1 font-normal"
+              className="flex items-center gap-1 p-1 font-permanent"
             >
               {icon &&
                 React.createElement(icon, {
@@ -49,10 +51,12 @@ export function Navbar({ brandName, routes, action }) {
               {name}
             </a>
           ) : (
-            <Link
-              to={path}
-              target={target}
-              className="flex items-center gap-1 p-1 font-normal"
+            <Link 
+              to={id}
+              smooth={true}
+              offset={0}
+              duration={800}
+              className="cursor-pointer"
             >
               {icon &&
                 React.createElement(icon, {
@@ -70,19 +74,19 @@ export function Navbar({ brandName, routes, action }) {
     <div className={`max-w-full container bg-black ${bgOpacityNavBar} fixed left-2/4 z-10 mx-auto -translate-x-2/4 text-center`}>
       <MTNavbar color="transparent" className="p-4 inline-block">
         <div className="container mx-auto flex items-center justify-between text-white">
-          <Link to="/">
-            <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold">
+          <LinkDom to="/">
+            <Typography className="mr-4 ml-2 cursor-pointer py-1.5 font-bold font-permanent">
               {brandName}
             </Typography>
-          </Link>
+          </LinkDom>
           <div className="hidden lg:block">{navList}</div>
           <div className="hidden gap-2 lg:flex">
             <a
               href="https://www.material-tailwind.com/blocks?ref=mtkr"
               target="_blank"
             >
-              <Button variant="text" size="sm" color="white" fullWidth>
-                pro version
+              <Button className="font-permanent" variant="text" size="sm" color="white" fullWidth>
+                ESP
               </Button>
             </a>
             {React.cloneElement(action, {
@@ -104,24 +108,28 @@ export function Navbar({ brandName, routes, action }) {
           </IconButton>
         </div>
         <MobileNav
-          className="rounded-xl bg-black px-4 pt-2  text-blue-gray-900"
+          className="rounded-xl bg-black px-4 pt-2  text-blue-gray-200"
           open={openNav}
         >
-          <div className="container mx-auto">
+          <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
             {navList}
-            <a
-              href="https://www.material-tailwind.com/blocks/react?ref=mtkr"
-              target="_blank"
-              className="mb-2 block"
-            >
-              <Button variant="text" size="sm" fullWidth>
-                pro version
-              </Button>
-            </a>
-            {React.cloneElement(action, {
-              className: "w-full block",
-            })}
-          </div>
+            <li>
+              <a
+                href="#"
+                target="_blank"
+                className="mb-2 block"
+              >
+                <Button color="white" className="font-permanent" variant="text" size="sm" fullWidth>
+                  ESP
+                </Button>
+              </a>
+            </li>
+            <li>
+              {React.cloneElement(action, {
+                className: "w-full block",
+              })}
+            </li>
+          </ul>
         </MobileNav>
       </MTNavbar>
     </div>
@@ -131,13 +139,16 @@ export function Navbar({ brandName, routes, action }) {
 Navbar.defaultProps = {
   brandName: "Wrap It Out",
   action: (
-    <a
-      href="/"
+    <Link 
+      to="home"
+      smooth={true}
+      offset={80}
+      duration={800}
     >
-      <Button variant="gradient" size="sm" fullWidth>
-        free download
+      <Button className="font-permanent" variant="text" size="sm" color="white" fullWidth>
+        Theme Dark
       </Button>
-    </a>
+    </Link>
   ),
 };
 

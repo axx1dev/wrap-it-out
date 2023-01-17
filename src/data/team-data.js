@@ -2,7 +2,7 @@ export const teamData = [
   {
     img: "/img/team-1.jpeg",
     name: "Axel Palacios",
-    position: "Wrapping",
+    position: "CEO",
     socials: [
       {
         color: "light-blue",

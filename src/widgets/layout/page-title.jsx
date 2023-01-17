@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
 import { Typography } from "@material-tailwind/react";
+import "../styles/pageTitle.css"
 
 export function PageTitle({ heading, children }) {
   return (
     <div className="mx-auto w-full px-4 text-center lg:w-6/12">
-      <Typography variant="h2" color="blue-gray" className="mb-3">
+      <Typography variant="h2" color="blue-gray" className="mb-3 font-permanent whitShadowWord">
         {heading}
       </Typography>
-      <Typography variant="lead" className="text-blue-gray-500">
+      <Typography variant="lead" className="text-blue-gray-400 font-permanent">
         {children}
       </Typography>
     </div>

@@ -2,26 +2,45 @@ import {
   StarIcon,
   PresentationChartLineIcon,
   RocketLaunchIcon,
+  SwatchIcon
 } from "@heroicons/react/24/solid";
 
 export const contactData = [
   {
-    title: "Excelent Services",
-    icon: StarIcon,
+    title: "Teck wrap México",
+    icon: SwatchIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "Venta al mayoreo/menudeo de materiales y herramientas para wrapping.",
   },
   {
-    title: "Grow Your Market",
-    icon: PresentationChartLineIcon,
+    title: "3m",
+    icon: SwatchIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "En 3M, aplicamos la ciencia de forma colaborativa para mejorar la vida de las personas diariamente.",
   },
   {
-    title: "Launch Time",
-    icon: RocketLaunchIcon,
+    title: "Avery dennison Latinoamerica",
+    icon: SwatchIcon,
     description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "WRAPP AVERY DENNISON",
+  },
+  {
+    title: "Vinyl world",
+    icon: SwatchIcon,
+    description:
+      "Distribuidores de VINIL AUTOMOTRIZ para WRAP a Nivel Nacional e Internacional.",
+  },
+  {
+    title: "Auto Elite",
+    icon: SwatchIcon,
+    description:
+      "Autoelite Car Design Solutions",
+  },
+  {
+    title: "Hexis",
+    icon: SwatchIcon,
+    description:
+      "Manufacturer of Adhesive films since 1989",
   },
 ];
 

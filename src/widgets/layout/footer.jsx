@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import { Typography, IconButton } from "@material-tailwind/react";
+import "../styles/footer.css"
 
 const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
-    <footer className="relative px-4 pt-8 pb-6">
+    <footer className="relative px-4 pt-8 pb-6 bg-black">
       <div className="container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
@@ -23,11 +24,11 @@ export function Footer({ title, description, socials, menus, copyright }) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IconButton color="white" className="rounded-full">
+                  <div>
                     <Typography color={color}>
-                      <i className={`fa-brands fa-${name}`} />
+                      <i className={`fa-brands fa-brands-custom fa-${name}`} />
                     </Typography>
-                  </IconButton>
+                  </div>
                 </a>
               ))}
             </div>
@@ -62,7 +63,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
             ))}
           </div>
         </div>
-        <hr className="my-6 border-gray-300" />
+        <hr className="my-6 border-blue-gray-500 whiteShadowInline" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
           <div className="mx-auto w-full px-4 text-center">
             <Typography
@@ -103,11 +104,11 @@ Footer.defaultProps = {
     {
       name: "Avisos",
       items: [
-        { name: "Aviso Legal", path: "https://www.creative-tim.com/presentation" },
-        { name: "Politítica de privacidad", path: "https://www.creative-tim.com/blog" },
+        { name: "Aviso Legal", path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/" },
+        { name: "Politítica de privacidad", path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/" },
         {
           name: "Politítica de cookies",
-          path: "https://www.github.com/creativetimofficial/material-tailwind?ref=mtk",
+          path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/",
         }
       ],
     },
@@ -116,19 +117,19 @@ Footer.defaultProps = {
       items: [
         {
           name: "4491126766",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk",
+          path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/",
         },
         {
           name: "axelpalacioos",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk",
+          path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/",
         },
         {
           name: "Lun - Dom de 09:00 am - 06:00 pm",
-          path: "https://github.com/creativetimofficial/material-tailwind/blob/main/CHANGELOG.md?ref=mtk",
+          path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/",
         },
         {
           name: "Real del Sol Ags.",
-          path: "https://creative-tim.com/contact-us?ref=mtk",
+          path: "https://www.linkedin.com/in/axel-palacios-66a8aa118/",
         },
       ],
     },
